@@ -37,7 +37,7 @@
    "scripts": {
     "ng": "ng",   
      "start22": "http-server -p 5000 ./dist/demo/",
-     "start": "concurrently --kill-others \"npm run build\" \"http-server -p 8080 ./dist/demo/\"",
+     "start": "concurrently --kill-others \"ng serve\"",
      "start44": "node app.js",
     "build": "ng build",
     "test": "ng test",
