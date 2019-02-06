@@ -1,26 +1,23 @@
+
+
 const express = require('express');
 const path = require('path');
-const PORT = process.env.PORT || 5000;
 
 const app = express();
 
-//set the path to the public folder for static assets
-app.use(express.static(path.join(__dirname, '')));
-
-
-
+// Serve only the static files form the dist directory
+app.use(express.static(__dirname + '/dist/heroku-app-angular'));
 
 app.get('/*', function (req, res) {
-    res.sendFile(path.join(__dirname, '/../index.html'));
-  
+    res.sendFile(path.join(__dirname + '/dist/demo/index.html'));
 });
 
-// app.get('/', (req,res) => {
-//     const pageTitle = "Home";
-//     res.render("index", {
-//         pageTitle: pageTitle
-//     })
+// app.use(express.static('/dist/heroku-app-angular'));
+
+// app.get('/*', function (req, res) {
+//     res.sendFile(path.join('/dist/heroku-app-angular/index.html'));
 // });
 
+// Start the app by listening on the default Heroku port
+app.listen(process.env.PORT || 8080);
 
-app.listen(PORT, () => console.log(`Listening on ${ PORT }`));
