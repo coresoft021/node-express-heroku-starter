@@ -12,6 +12,9 @@ app.get('/*', function (req, res) {
     res.sendFile(path.join(__dirname + '/dist/demo/index.html'));
 });
 
+
+
+
 // app.use(express.static('/dist/heroku-app-angular'));
 
 // app.get('/*', function (req, res) {
