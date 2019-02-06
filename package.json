@@ -36,14 +36,13 @@
   },
    "scripts": {
     "ng": "ng",   
-     "start": "http-server -p 5000 ./dist/demo/",
-     "start2": "concurrently --kill-others \"ng serve\"",
-     "start44": "node app.js",
+        "start": "node app.js",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
     "postinstall": "ng build --prod"
+
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.10.0",
