@@ -37,6 +37,8 @@
    "scripts": {
     "ng": "ng",
     "start": "ng serve",
+     "postinstall": "npm run build",
+     "start": "concurrently --kill-others \"npm run _server:run\" \"http-server -p 8080 ./dist/demo/\"",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
